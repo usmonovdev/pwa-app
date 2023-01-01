@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Emoji } from './emoji'
 import EmojiList from './EmojiList'
+import "./emoji.css"
 
 function App() {
   const [query, setQuery] = useState("")

@@ -1,22 +1,15 @@
 import React from 'react'
 
 function EmojiList({ data }) {
-  return (
-    <table>
-        <tbody>
-            <tr>
-                <th>Emoji</th>
-                <th>Name</th>
-            </tr>
+    return (
+        <>
             {data.map((item, id) => (
-                <tr key={id}>
-                    <th>{item.symbol}</th>
-                    <th>{item.title}</th>
-                </tr>
+                <div key={id} className="box">
+                    <h1>{item.symbol}</h1>
+                </div>
             ))}
-        </tbody>
-    </table>
-  )
+        </>
+    )
 }
 
 export default EmojiList
