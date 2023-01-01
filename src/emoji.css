@@ -8,7 +8,7 @@
     padding: 20px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -21,8 +21,9 @@
     border: 1px solid black;
     margin: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.box h1 {
-    cursor: pointer;
+.box:hover {
+    box-shadow: 1px 0px 10px 0px rgba(34, 60, 80, 0.233);
 }
