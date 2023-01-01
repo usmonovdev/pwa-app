@@ -1,16 +1,28 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .list {
     padding: 20px;
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .box {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     border: 1px solid black;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.box h1 {
+    cursor: pointer;
 }
