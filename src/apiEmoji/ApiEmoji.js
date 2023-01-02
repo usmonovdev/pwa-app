@@ -1,11 +1,11 @@
-import axios from 'axios'
+// import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 const ACCESS_KEY = "e4e8c1eddab35e74a281f6506f4437beea763f7b"
 
 function ApiEmoji() {
-    const [query, setQuery] = useState("")
+    // const [query, setQuery] = useState("")
     const [result, setResult] = useState({})
     console.log(result);
     const search = async () => {
@@ -19,7 +19,7 @@ function ApiEmoji() {
     }, [])
     return (
         <div>
-            <input type="text" className='search' placeholder='Search...' onChange={e => setQuery(e.target.value)} />
+            {/* <input type="text" className='search' placeholder='Search...' onChange={e => setQuery(e.target.value)} /> */}
             <button onClick={search}>Search</button>
             <ul className="list">
                 {result.map((emoji, id) => {
