@@ -1,5 +1,5 @@
 import React from 'react'
-import emoji from 'emoji-api'
+// import emoji from 'emoji-api'
 
 function ApiEmoji() {
     const emoji = require("emoji-api");
