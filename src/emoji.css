@@ -8,8 +8,14 @@
     padding: 20px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+    .list {
+        padding: 0px;
+    }
 }
 
 .box {
