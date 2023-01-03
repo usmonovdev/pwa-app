@@ -241,3 +241,24 @@ body {
         font-size: 18px;
     }
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.up {
+    padding: 10px;
+    background-color: #7c78c9;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.256);
+    border-radius: 50%;
+    font-size: 3rem;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.up:hover {
+    box-shadow: 0px 0px 10px 0px #223c50a6;
+}

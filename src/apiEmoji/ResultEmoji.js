@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import Open from "./Open"
+import { HiOutlineChevronUp } from "react-icons/hi"
+import { useEffect } from 'react'
 
 function ResultEmoji({ result }) {
 
@@ -11,6 +13,13 @@ function ResultEmoji({ result }) {
         setNewEmoji(data)
         setIsOpen(true)
     }
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
     return (
         <>
@@ -24,6 +33,7 @@ function ResultEmoji({ result }) {
                 })}
             </div>
             {isOpen ? <Open newEmoji={newEmoji} close={() => setIsOpen(false)} /> : ""}
+            <HiOutlineChevronUp className='up' onClick={scrollToTop} />
         </>
     )
 }
