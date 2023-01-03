@@ -6,6 +6,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --toastify-icon-color-success: #7c78c9;
+    --toastify-color-progress-success: #7c78c9;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -103,5 +108,19 @@ body {
     100% {
         transform: scale(1);
         border-radius: 0%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Toastify__toast-container {
+        border-radius: 10px !important;
+        width: 70% !important;
+        border-radius: 30px;
+    }
+    .Toastify__toast-container--bottom-center {
+        position: absolute !important;
+        left: 50%;
+        top: -95%;
+        transform: translate(-50%, 95%);
     }
 }
