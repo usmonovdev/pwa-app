@@ -13,8 +13,8 @@ body {
 .inputBox {
     width: 100%;
     height: 50px;
-    background-color: rgb(124, 120, 201);
-    position: fixed;
+    background-color: #7c78c9;
+    position: relative;
     z-index: 100;
     display: flex;
     align-items: center;
@@ -23,8 +23,8 @@ body {
 
 .inputBox input {
     width: 15%;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(124, 120, 201);
+    background-color: #ffffff;
+    border: 2px solid #7c78c9;
     border-radius: 4px;
     padding: 5px 5px 5px 5px;
     margin: 0 10px 0 10px;
@@ -33,7 +33,7 @@ body {
 }
 
 .inputBox input:focus {
-    border: 2px solid rgb(112, 86, 206);
+    border: 2px solid #7056ce;
 }
 
 @media screen and (max-width: 768px) {
@@ -54,8 +54,6 @@ body {
 }
 
 .list {
-    position: relative;
-    top: 30px;
     padding: 20px;
     width: 100%;
     display: flex;
@@ -75,12 +73,35 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .box:hover {
-    box-shadow: 1px 0px 10px 0px rgba(34, 60, 80, 0.233);
+    box-shadow: 1px 0px 10px 0px #223c503b;
+}
+
+.card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a123684;
+    backdrop-filter: blur(5px);
+    z-index: 200;
+    animation: open 100ms linear both;
+}
+
+@keyframes open {
+    0% {
+        transform: scale(.9);
+        border-radius: 20%;
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 0%;
+    }
 }
