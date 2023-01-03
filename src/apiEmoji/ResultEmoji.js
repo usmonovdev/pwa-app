@@ -8,7 +8,6 @@ function ResultEmoji({ result }) {
     const [isOpen, setIsOpen] = useState(false)
     const [newEmoji, setNewEmoji] = useState([])
     const [scrollBtn, setScrollBtn] = useState(false)
-    const [offset, setOffset] = useState(0);
 
     const openEmoji = (data) => {
         setNewEmoji(data)
