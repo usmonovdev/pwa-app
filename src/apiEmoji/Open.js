@@ -12,24 +12,33 @@ function Open({ newEmoji, close }) {
     }
 
     return (
-        <div className='card'>
-            <h1>{newEmoji.codepoints}</h1>
-            <h1>{newEmoji.emoji}</h1>
-            <h1>{newEmoji.name}</h1>
-            <h1>{newEmoji.group}</h1>
-            <h1>{newEmoji.sub_group}</h1>
-            <HiOutlineClipboardCopy onClick={() => copy()} />
-            <FaTimes onClick={close} />
-            <ToastContainer position="bottom-center"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light" />
+        <div className="cardBox">
+            <div className='card'>
+                <div className="top">
+                    <FaTimes className='close' onClick={close} />
+                    <HiOutlineClipboardCopy className='copy' onClick={() => copy()} />
+                </div>
+                <div className='infoBox'>
+                    <h1 className='emoji' onClick={() => copy()}>{newEmoji.emoji}</h1>
+                    <div className="info">
+                        <h1>#{newEmoji.codepoints}</h1>
+                        <h1><span>Name: </span>{newEmoji.name}</h1>
+                        <h1><span>Category: </span>{newEmoji.group}</h1>
+                        <h1><span>Group: </span>{newEmoji.sub_group}</h1>
+                    </div>
+                </div>
+                <ToastContainer position="bottom-center"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                />
+            </div>
         </div>
     )
 }
