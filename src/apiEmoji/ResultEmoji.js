@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import Open from "./Open"
 import { HiOutlineChevronUp } from "react-icons/hi"
-import { useEffect } from 'react'
 
 function ResultEmoji({ result }) {
 
