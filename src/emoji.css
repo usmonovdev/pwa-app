@@ -257,6 +257,16 @@ body {
     bottom: 30px;
     right: 30px;
     cursor: pointer;
+    animation: scroll 200ms both;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .up:hover {
